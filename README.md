@@ -68,7 +68,7 @@ import random
 
 class Greeter(helloworld_pb2_grpc.GreeterServicer):
     def RequestInstruction(self, request, context):
-        print("received instruction: " + str(request.x) + ", " + str(request.z))
+        print("received request: " + str(request.x) + ", " + str(request.z))
         return helloworld_pb2.OutputAI(fx=random.random(), fz=random.random())
 
 def serve():
@@ -132,6 +132,16 @@ public class Client : MonoBehaviour
     private float newPosition_x;
     private float newPosition_z;
 
+/*    void Start()
+    {
+        using var handler = new YetAnotherHttpHandler() { Http2Only = true };
+        using var channeltest = GrpcChannel.ForAddress("http://localhost:5071", new GrpcChannelOptions() { HttpHandler = handler });
+        var clienttest = new Greeter.GreeterClient(channeltest);
+
+        InputPosition request = new InputPosition { X = 0, Z = 0 };
+        var reply = clienttest.RequestInstruction(request);
+    }*/
+
     // Start is called before the first frame update
     void Start()
     {
@@ -152,7 +162,7 @@ public class Client : MonoBehaviour
 
     async void GetResponseAsync()
     {
-        InputPosition request = new InputPosition { X = 0, Z = 0 };
+        InputPosition request = new InputPosition { X = cube.position.x, Z = cube.position.z };
         OutputAI response = await client.RequestInstructionAsync(request);
         newPosition_x = response.Fx;
         newPosition_z = response.Fz;
@@ -162,7 +172,7 @@ public class Client : MonoBehaviour
 
     private void GetResponse()
     {
-        InputPosition request = new InputPosition { X = 0, Z = 0 };
+        InputPosition request = new InputPosition { X = cube.position.x, Z = cube.position.z };
         OutputAI response = client.RequestInstruction(request);
         newPosition_x = response.Fx;
         newPosition_z = response.Fz;
