@@ -90,6 +90,7 @@ You can run both greeter_server.py and greeter_client.py in the repo to test if 
 
 ## 4. Unity Client
 First, download NuGetForUnity by following the instruction: https://github.com/GlitchEnzo/NuGetForUnity.
+
 Second, download these things by using NuGetForUnity:
 ![image](https://github.com/MichaelY310/gRPC_UnityPython/assets/95990939/b3fde25d-3c8b-46f4-8acd-a352dce0d0c3)
 
@@ -97,7 +98,8 @@ Second, download these things by using NuGetForUnity:
 Third, we need YetAnotherHttpHandler. Download it by following the instruction:  https://github.com/Cysharp/YetAnotherHttpHandler.
 Finally, download Grpc.Tools2.62.0 https://www.nuget.org/packages/Grpc.Tools/ (You can also directly grab it from repo under "unity_grpc_gen"). After getting the .nupkg file by clicking Download package, rename it to .zip and put the extracted things under "unity_grpc_gen".
 
-That's all we need. Now we can start coding.
+#### That's all we need. Now we can start coding.
+
 First, run the following commands:
 ```
 cd ../unity_grpc_gen
