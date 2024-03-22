@@ -1,12 +1,15 @@
 # gRPC_UnityPython
 A very simple example of building connection between a Unity client and python server.
 
+## How to run
+Run "GrpcUnityPy/GrpcPython/greeter_server.py" and then click the play button in Unity. Everytime you press the "Space" button, the cube should move to a random place. 
+
 ## Note
 * Checkout these two tutorials to learn about environments and gRPC: https://grpc.io/docs/languages/python/basics/    https://learn.microsoft.com/en-us/aspnet/core/tutorials/grpc/grpc-start?view=aspnetcore-8.0&tabs=visual-studio
-* It seems like Unity doesn't support Http/2. So if you got something like "bad response" or "error getting response", consider using https://github.com/Cysharp/yetanotherhttphandler.
+* It seems like Unity doesn't support Http/2. So if you got something like "bad response" or "error getting response" before reading this, consider using https://github.com/Cysharp/yetanotherhttphandler.
 
 ## 1. Create the project
-* Make a folder called GrpcUnityPy.
+* Make a folder called "GrpcUnityPy".
 * Inside the project folder add "GrpcPython" (server) and "unity_grpc_gen" (for proto generation).
 * Create a Unity 3D Core project called "UnityClient". I used Unity 2022.3.19f1.
 
