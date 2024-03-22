@@ -91,6 +91,8 @@ You can run both greeter_server.py and greeter_client.py in the repo to test if 
 ## 4. Unity Client
 First, download NuGetForUnity by following the instruction: https://github.com/GlitchEnzo/NuGetForUnity.
 Second, download these things by using NuGetForUnity:
+![image](https://github.com/MichaelY310/gRPC_UnityPython/assets/95990939/b3fde25d-3c8b-46f4-8acd-a352dce0d0c3)
+
 
 Third, we need YetAnotherHttpHandler. Download it by following the instruction:  https://github.com/Cysharp/YetAnotherHttpHandler.
 Finally, download Grpc.Tools2.62.0 https://www.nuget.org/packages/Grpc.Tools/ (You can also directly grab it from repo under "unity_grpc_gen"). After getting the .nupkg file by clicking Download package, rename it to .zip and put the extracted things under "unity_grpc_gen".
@@ -177,7 +179,9 @@ public class Client : MonoBehaviour
 If your Cysharp namespace looks red in the editor, checkout this issue: https://github.com/dotnet/vscode-csharp/issues/4196.
 Also see if https://github.com/Cysharp/YetAnotherHttpHandler/issues/61 helps if you encounter the same problem.
 
-Finally, drag "Client.cs" to the default cube in the Unity scene.
+Finally, create a empty object called "Agent" and drag "Client.cs" onto it. Drag the default cube in the Unity scene to here:
+![image](https://github.com/MichaelY310/gRPC_UnityPython/assets/95990939/ae62480c-29a2-4709-910f-df39ddc1a030)
+
 
 ## Test
 Run "greeter_server.py" and then click the play button in Unity. Everytime you press the "Space" button, the cube should move to a random place. 
